@@ -2,14 +2,16 @@
 <head>
   <title>Markov Contact</title>
   <style>
+    html, body { width: 100%; height: 100% }
     body {
       margin: 0;
       background-color: black;
       color: white;
       font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      display: flex;
+      flex-direction: column;
     }
     #infobar {
-      position: fixed;
       bottom: 0;
       right: 0;
       width: 100%;
@@ -51,13 +53,13 @@
     #splash div {
       flex: 0 1 auto;
       text-shadow: 0px 0px 16px #000, 0px 0px 16px #000;
+      text-align: center;
     }
     #splash h1 {
       font-size: 92px;
     }
     #splash h2 {
       font-size: 36px;
-      text-align: center;
     }
     #click {
       opacity: 0;
@@ -76,7 +78,8 @@
   <svg version="1.1"
        baseProfile="full"
        width="100%" height="100%"
-       viewbox="0 0 1600 900"
+       viewBox="0 0 1600 900"
+       preserveAspectRatio="xMidYMin"
        xmlns="http://www.w3.org/2000/svg"
        xmlns:xlink= "http://www.w3.org/1999/xlink">
   </svg>
