@@ -1,0 +1,569 @@
+{
+  "groups": {
+    "countdown": {
+      "fill": "#4A9344",
+      "stroke": "#5EB459",
+      "label": {
+        "x": 800,
+        "y": 800,
+        "text": ["Contact"]
+      },
+      "image": {
+        "name": "countdown",
+        "x": 470,
+        "y": 810,
+        "w": 621,
+        "h": 89
+      },
+      "nospokes": true,
+      "mode": "twinkle"
+    },
+    "liftoff": {
+      "fill": "#E8620B",
+      "stroke": "#E88818",
+      "label": {
+        "x": 200,
+        "y": 640,
+        "text": ["Liftoff"]
+      },
+      "image": {
+        "name": "boosters",
+        "x": 600,
+        "y": 100,
+        "w": 400,
+        "h": 700
+      },
+      "mode": "fly"
+    },
+    "cruise": {
+      "fill": "#C2185B",
+      "stroke": "#D9245F",
+      "label": {
+        "x": 1400,
+        "y": 640,
+        "text": ["Cruise"]
+      },
+      "image": {
+        "name": "ship",
+        "x": 600,
+        "y": 100,
+        "w": 400,
+        "h": 700
+      },
+      "mode": "surf"
+    },
+    "spacewalk": {
+      "fill": "#10AFAF",
+      "stroke": "#24BAB5",
+      "label": {
+        "x": 800,
+        "y": 400,
+        "text": ["Spacewalk"]
+      },
+      "image": {
+        "name": "spacewalk",
+        "x": 1200,
+        "y": 200,
+        "w": 200,
+        "h": 423
+      },
+      "mode": "circles"
+    },
+    "reentry": {
+      "fill": "#0b78e8",
+      "stroke": "#0b5ee8",
+      "label": {
+        "x": 800,
+        "y": 700,
+        "text": ["Re-Entry"]
+      },
+      "image": {
+        "name": "reentry",
+        "x": 205,
+        "y": 500,
+        "w": 222,
+        "h": 200
+      },
+      "mode": "fall"
+    },
+    "contact": {
+      "fill": "#6628D8",
+      "stroke": "#7038D7",
+      "label": {
+        "x": 800,
+        "y": 100,
+        "text": ["Contact"]
+      },
+      "image": {
+        "name": "contact",
+        "x": 465,
+        "y": 0,
+        "w": 683,
+        "h": 100
+      },
+      "mode": "contact"
+    },
+    "recharging": {
+      "fill": "#FADE31",
+      "stroke": "#F7AF29",
+      "label": {
+        "x": 800,
+        "y": 250,
+        "text": ["Recharging"]
+      },
+      "image": {
+        "name": "spiral",
+        "x": 150,
+        "y": 100,
+        "w": 200,
+        "h": 250
+      },
+      "mode": "swirls"
+    },
+    "splashdown": {
+      "fill": "#AAAAAA",
+      "stroke": "#DDDDDD",
+      "label": {
+        "x": 800,
+        "y": 475,
+        "text": ["Splashdown"]
+      },
+      "image": {
+        "name": "splashdown",
+        "hidden": true,
+        "x": 125,
+        "y": 800,
+        "w": 210,
+        "h": 116
+      },
+      "mode": "static"
+    }
+  },
+  "nodes": {
+    "countdown_6":{
+      "group": "countdown",
+      "x": 539, "y": 854,
+      "label": "6",
+      "links": {
+        "1": ["countdown_5"]
+      },
+      "rate": 0.5
+    },
+    "countdown_5":{
+      "group": "countdown",
+      "x": 643, "y": 853,
+      "label": "5",
+      "links": {
+        "1": ["countdown_4"]
+      },
+      "rate": 0.5
+    },
+    "countdown_4":{
+      "group": "countdown",
+      "x": 745, "y": 852,
+      "label": "4",
+      "links": {
+        "1": ["countdown_3"]
+      },
+      "rate": 1
+    },
+    "countdown_3":{
+      "group": "countdown",
+      "x": 852, "y": 852,
+      "label": "3",
+      "links": {
+        "1": ["countdown_2"]
+      },
+      "rate": 1
+    },
+    "countdown_2":{
+      "group": "countdown",
+      "x": 950, "y": 854,
+      "label": "2",
+      "links": {
+        "1": ["countdown_1"]
+      },
+      "rate": 2
+    },
+    "countdown_1":{
+      "group": "countdown",
+      "x": 1039, "y": 856,
+      "label": "1",
+      "links": {
+        "1": ["liftoff_A_swirl"]
+      },
+      "rate": 2
+    },
+    "liftoff_A_in":{
+      "group": "liftoff",
+      "x": 690, "y": 300,
+      "label": "A In",
+      "links": {
+        "1": ["liftoff_B"]
+      }
+    },
+    "liftoff_A_swirl":{
+      "group": "liftoff",
+      "x": 715, "y": 760,
+      "label": "A Swirl",
+      "links": {
+        "1": ["liftoff_B"]
+      }
+    },
+    "liftoff_A_variant":{
+      "group": "liftoff",
+      "x": 860, "y": 300,
+      "label": "A Variant",
+      "links": {
+        "1": ["liftoff_B_variant"]
+      }
+    },
+    "liftoff_A_breakdown":{
+      "group": "liftoff",
+      "x": 825, "y": 215,
+      "label": "A Breakdown",
+      "links": {
+        "1": ["liftoff_B_breakdown", "liftoff_B_variant"]
+      },
+      "rate": 0.5
+    },
+    "liftoff_A_wew":{
+      "group": "liftoff",
+      "x": 750, "y": 175,
+      "label": "A wew",
+      "links": {
+        "1": ["liftoff_B_wew"]
+      },
+      "mode": "yaw"
+    },
+    "liftoff_B":{
+      "group": "liftoff",
+      "x": 715, "y": 260,
+      "label": "B",
+      "links": {
+        "1": ["liftoff_C_breakdown"],
+        "3": ["liftoff_C"]
+      }
+    },
+    "liftoff_B_variant":{
+      "group": "liftoff",
+      "x": 910, "y": 300,
+      "label": "B Variant",
+      "links": {
+        "1": ["liftoff_C", "liftoff_C_breakdown"]
+      }
+    },
+    "liftoff_B_breakdown":{
+      "group": "liftoff",
+      "x": 850, "y": 175,
+      "label": "B Breakdown",
+      "links": {
+        "1": ["liftoff_C_breakdown"]
+      },
+      "rates": [0.5, 0.75]
+    },
+    "liftoff_B_wew":{
+      "group": "liftoff",
+      "x": 775, "y": 215,
+      "label": "B wew",
+      "links": {
+        "1": ["liftoff_C_wew"]
+      },
+      "mode": "yaw"
+    },
+    "liftoff_C":{
+      "group": "liftoff",
+      "x": 885, "y": 260,
+      "label": "C",
+      "links": {
+        "1": ["liftoff_D", "liftoff_D_bridge"]
+      }
+    },
+    "liftoff_C_breakdown":{
+      "group": "liftoff",
+      "x": 805, "y": 140,
+      "label": "C Breakdown",
+      "links": {
+        "1": ["liftoff_A_wew"]
+      },
+      "rates": [0.1, 0.5]
+    },
+    "liftoff_C_wew":{
+      "group": "liftoff",
+      "x": 740, "y": 300,
+      "label": "C wew",
+      "links": {
+        "1": ["liftoff_D_wew"]
+      },
+      "mode": "yaw"
+    },
+    "liftoff_D":{
+      "group": "liftoff",
+      "x": 825, "y": 260,
+      "label": "D",
+      "links": {
+        "1": ["liftoff_A_breakdown", "liftoff_A_variant"],
+        "2": ["cruise_1_in", "cruise_1_in_scratch"]
+      }
+    },
+    "liftoff_D_bridge":{
+      "group": "liftoff",
+      "x": 880, "y": 750,
+      "label": "D Bridge",
+      "links": {
+        "1": ["spacewalk_1"]
+      }
+    },
+    "liftoff_D_wew":{
+      "group": "liftoff",
+      "x": 775, "y": 260,
+      "label": "D wew",
+      "links": {
+        "1": ["liftoff_A_breakdown", "liftoff_A_variant"],
+        "4": ["cruise_1_in", "cruise_1_in_scratch"]
+      },
+      "mode": "yaw"
+    },
+    "cruise_1_in":{
+      "group": "cruise",
+      "x": 765, "y": 395,
+      "label": "In",
+      "links": {
+        "1": ["cruise_2"]
+      }
+    },
+    "cruise_1_in_scratch":{
+      "group": "cruise",
+      "x": 835, "y": 395,
+      "label": "In Scratch",
+      "links": {
+        "1": ["cruise_2_scratch"]
+      }
+    },
+    "cruise_1":{
+      "group": "cruise",
+      "x": 628, "y": 695,
+      "label": "1",
+      "links": {
+        "1": ["cruise_2"],
+        "2": ["cruise_2_out"]
+      }
+    },
+    "cruise_1_scratch":{
+      "group": "cruise",
+      "x": 981, "y": 691,
+      "label": "1 Scratch",
+      "links": {
+        "1": ["cruise_2_scratch"],
+        "2": ["cruise_2_out_scratch"]
+      }
+    },
+    "cruise_2":{
+      "group": "cruise",
+      "x": 760, "y": 645,
+      "label": "2",
+      "links": {
+        "1": ["cruise_1", "cruise_1_scratch"]
+      }
+    },
+    "cruise_2_out":{
+      "group": "cruise",
+      "x": 760, "y": 715,
+      "label": "Out",
+      "links": {
+        "1": ["reentry_4", "contact_1"]
+      }
+    },
+    "cruise_2_scratch":{
+      "group": "cruise",
+      "x": 835, "y": 645,
+      "label": "2 Scratch",
+      "links": {
+        "1": ["cruise_1", "cruise_1_scratch"]
+      }
+    },
+    "cruise_2_out_scratch":{
+      "group": "cruise",
+      "x": 825, "y": 715,
+      "label": "Out Scratch",
+      "links": {
+        "1": ["reentry_4", "contact_1"]
+      }
+    },
+    "cruise_2_out_scratch":{
+      "group": "cruise",
+      "x": 826, "y": 715,
+      "label": "Out Scratch",
+      "links": {
+        "1": ["reentry_4", "contact_1"]
+      }
+    },
+    "spacewalk_1":{
+      "group": "spacewalk",
+      "x": 1258, "y": 530,
+      "label": "A",
+      "links": {
+        "1": ["spacewalk_2"]
+      }
+    },
+    "spacewalk_2":{
+      "group": "spacewalk",
+      "x": 1272, "y": 464,
+      "label": "B",
+      "links": {
+        "1": ["spacewalk_3"]
+      }
+    },
+    "spacewalk_3":{
+      "group": "spacewalk",
+      "x": 1325, "y": 428,
+      "label": "C",
+      "links": {
+        "1": ["spacewalk_4"]
+      },
+      "rate": 2
+    },
+    "spacewalk_4":{
+      "group": "spacewalk",
+      "x": 1352, "y": 307,
+      "label": "D",
+      "links": {
+        "1": ["cruise_1_in", "cruise_1_in_scratch"]
+      },
+      "rate": 4
+    },
+    "reentry_4":{
+      "group": "reentry",
+      "x": 405, "y": 507,
+      "label": "4",
+      "links": {
+        "1": ["reentry_3"]
+      },
+      "rates": [1, 1.25, 1.5]
+    },
+    "reentry_3":{
+      "group": "reentry",
+      "x": 318, "y": 573,
+      "label": "3",
+      "links": {
+        "1": ["reentry_2"]
+      },
+      "rates": [2, 2.25, 2.5]
+    },
+    "reentry_2":{
+      "group": "reentry",
+      "x": 279, "y": 622,
+      "label": "2",
+      "links": {
+        "1": ["reentry_1"]
+      },
+      "rates": [3, 3.25, 3.5]
+    },
+    "reentry_1":{
+      "group": "reentry",
+      "x": 260, "y": 675,
+      "label": "1",
+      "links": {
+        "0": ["splashdown"],
+        "1": ["liftoff_A_swirl"]
+      },
+      "rates": [4, 4.25, 4.5]
+    },
+    "contact_1":{
+      "group": "contact",
+      "x": 1135, "y": 0,
+      "label": "A",
+      "links": {
+        "1": ["contact_2"]
+      },
+      "rate": 1
+    },
+    "contact_2":{
+      "group": "contact",
+      "x": 1015, "y": 65,
+      "label": "B",
+      "links": {
+        "1": ["contact_3"]
+      },
+      "rate": 1
+    },
+    "contact_3":{
+      "group": "contact",
+      "x": 895, "y": 92,
+      "label": "C",
+      "links": {
+        "1": ["contact_4"]
+      },
+      "rate": 2
+    },
+    "contact_4":{
+      "group": "contact",
+      "x": 705, "y": 95,
+      "label": "D",
+      "links": {
+        "1": ["contact_5"]
+      },
+      "rate": 2
+    },
+    "contact_5":{
+      "group": "contact",
+      "x": 585, "y": 60,
+      "label": "D",
+      "links": {
+        "1": ["contact_6"]
+      },
+      "rate": 4
+    },
+    "contact_6":{
+      "group": "contact",
+      "x": 475, "y": 0,
+      "label": "D",
+      "links": {
+        "1": ["recharging_4"]
+      },
+      "rate": 4
+    },
+    "recharging_4":{
+      "group": "recharging",
+      "x": 228, "y": 126,
+      "label": "4",
+      "links": {
+        "1": ["recharging_3"]
+      },
+      "rate": 1
+    },
+    "recharging_3":{
+      "group": "recharging",
+      "x": 169, "y": 200,
+      "label": "3",
+      "links": {
+        "1": ["recharging_2"]
+      },
+      "rate": 2
+    },
+    "recharging_2":{
+      "group": "recharging",
+      "x": 226, "y": 289,
+      "label": "2",
+      "links": {
+        "1": ["recharging_1"]
+      },
+      "rate": 3
+    },
+    "recharging_1":{
+      "group": "recharging",
+      "x": 229, "y": 217,
+      "label": "1",
+      "links": {
+        "1": ["liftoff_A_in"]
+      },
+      "rate": 4
+    },
+    "splashdown":{
+      "group": "splashdown",
+      "x": 227, "y": 890,
+      "label": "Splashdown",
+      "links": {}
+    }
+  }
+}
