@@ -1042,5 +1042,9 @@ mp3 lengths accurately. Also because oggs are better or something.
       .then ->
         $('#click').style.opacity = 1
         $('#splash').addEventListener 'click', ->
+
+          audioContext.resume()
+          navigator.audioSession?.type = 'playback'
+
           director.jump(nodes.countdown_6)
           $('#splash').remove()
